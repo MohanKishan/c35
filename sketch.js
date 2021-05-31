@@ -1,6 +1,5 @@
 var balloon,balloonImage1,balloonImage2;
-var balloonPosition=database.ref('balloon/height');
-balloonPosition.on("value",readPostion,showError);
+
 // create database and position variable here
 
 function preload(){
@@ -21,7 +20,10 @@ function setup() {
   balloon.scale=0.5;
 
   textSize(20); 
+   var balloonPosition=database.ref('balloon/height');
+balloonPosition.on("value",readPostion,showError);
 }
+
 function updateHeight(x,y){
  database.ref('balloon/height').set({
 'x':height.x + x ,
