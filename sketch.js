@@ -1,4 +1,5 @@
 var balloon,balloonImage1,balloonImage2;
+var database
 
 // create database and position variable here
 
